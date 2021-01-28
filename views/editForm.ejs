@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students page</title>
+</head>
+
+<body>
+
+    <h4>Edit Students Data</h4>
+    <a href="/students">Show all data</a>
+
+    <form action="/students/:id/edit" method="post">
+        <% for(let i=0; i < result.length; i++) {%>
+            <input type="hidden" name="id" value="<%=result[i].id%>">
+            <label><strong>First Name</strong></label><br>
+            <input type="text" label="Student" name="first_name" value="<%= result[i].first_name %>"><br>
+
+            <label><strong>Last Name</strong></label><br>
+            <input type="text" label="Student" name="last_name" value="<%= result[i].last_name %>"><br>
+
+            <label><strong>Email</strong></label><br>
+            <input type="text" label="Student" name="email" value="<%= result[i].email %>"><br>
+            <label><strong>Gender</strong></label><br>
+            <select label="Student" name="gender">
+                <option value="select">select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+            <!-- <label><strong>Gender</strong></label><br> -->
+            <!-- <input type="text" label="Student" name="gender" value="<%= result[i].gender %>"><br> -->
+
+            <label><strong>Birth Date</strong></label><br>
+            <input type="date" label="Student" name="birth_date" value="<%= result[i].birth_date %>"><br>
+            <input type="submit" value="Submit">
+            <%}%>
+    </form>
+    <%- include('./partials/footer.ejs') %>

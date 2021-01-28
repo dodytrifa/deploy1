@@ -1,0 +1,24 @@
+<%- include('./partials/style.ejs') %>
+    <h4>Subjects page</h4>
+    <h1></h1>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>subject_name</th>
+            <th>category</th>
+        </tr>
+        <% for(let i=0; i <data.length; i++) {%>
+            <tr>
+                <td>
+                    <%= data[i].id %>
+                </td>
+                <td>
+                    <%= data[i].subject_name %>
+                </td>
+                <td>
+                    <%= data[i].category %>
+                </td>
+            </tr>
+            <%}%>
+    </table><br><br>
+    <%- include('./partials/footer.ejs') %>

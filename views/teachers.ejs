@@ -1,0 +1,32 @@
+<%- include('./partials/style.ejs') %>
+
+    <h4>Teachers page</h4>
+    <table>
+        <tr>
+            <td>id</td>
+            <td>First Name</td>
+            <td>last Name</td>
+            <td>email</td>
+            <td>gender</td>
+        </tr>
+        <% for(let i=0; i <data.length; i++) {%>
+            <tr>
+                <td>
+                    <%= data[i].id %>
+                </td>
+                <td>
+                    <%= data[i].first_name %>
+                </td>
+                <td>
+                    <%= data[i].last_name %>
+                </td>
+                <td>
+                    <%= data[i].email %>
+                </td>
+                <td>
+                    <%= data[i].gender %>
+                </td>
+            </tr>
+            <%}%>
+    </table> <br><br>
+    <%- include('./partials/footer.ejs') %>

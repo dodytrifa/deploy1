@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students page</title>
+</head>
+
+<body>
+    <h4>Add Students Data</h4>
+
+    <form action="/students/add" method="post">
+
+        <label><strong>First Name</strong></label><br>
+        <input type="text" label="Student" name="first_name"><br>
+
+        <label><strong>Last Name</strong></label><br>
+        <input type="text" label="Student" name="last_name"><br>
+
+        <label><strong>Email</strong></label><br>
+        <input type="text" label="Student" name="email"><br>
+
+        <label><strong>Gender</strong></label><br>
+        <select label="Student" name="gender">
+            <option value="select">select</option>
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select><br>
+        <!-- <input type="option" label="Student" name="gender"><br> -->
+        <label><strong>Birth Date</strong></label><br>
+        <input type="date" label="Student" name="birth_date"><br>
+
+        <button type="submit">Add Student</button>
+
+    </form><br><br>
+    <%- include('./partials/footer.ejs') %>
